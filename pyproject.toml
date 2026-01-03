@@ -1,0 +1,77 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "api-fortress"
+version = "1.0.0"
+description = "Professional-grade automated API security testing suite based on OWASP API Security Top 10"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [
+    {name = "API Fortress Team", email = "security@apifortress.dev"}
+]
+keywords = ["api", "security", "testing", "owasp", "pentesting", "vulnerability-scanner"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Information Technology",
+    "Topic :: Security",
+    "Topic :: Software Development :: Testing",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+
+dependencies = [
+    "aiohttp>=3.9.0",
+    "rich>=13.7.0",
+    "click>=8.1.7",
+    "pydantic>=2.5.0",
+    "pyyaml>=6.0.1",
+    "httpx>=0.25.0",
+    "pyjwt>=2.8.0",
+    "cryptography>=41.0.0",
+    "validators>=0.22.0",
+    "python-dotenv>=1.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4.0",
+    "pytest-asyncio>=0.21.0",
+    "black>=23.7.0",
+    "mypy>=1.5.0",
+    "ruff>=0.0.280",
+]
+
+[project.scripts]
+api-fortress = "api_fortress.cli:main"
+fortress = "api_fortress.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/api-fortress/api-fortress"
+Documentation = "https://docs.apifortress.dev"
+Repository = "https://github.com/api-fortress/api-fortress"
+"Bug Tracker" = "https://github.com/api-fortress/api-fortress/issues"
+
+[tool.setuptools]
+packages = ["api_fortress"]
+
+[tool.black]
+line-length = 100
+target-version = ['py39']
+
+[tool.mypy]
+python_version = "3.9"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+
+[tool.ruff]
+line-length = 100
+target-version = "py39"

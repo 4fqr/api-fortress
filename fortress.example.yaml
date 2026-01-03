@@ -1,0 +1,47 @@
+# Example API Fortress Configuration
+# Save this as fortress.yaml and use with: fortress scan -c fortress.yaml
+
+target:
+  base_url: "https://api.example.com"
+  headers:
+    User-Agent: "API-Fortress/1.0"
+    Accept: "application/json"
+
+authentication:
+  type: "bearer"  # Options: bearer, basic, apikey, none
+  token: "your-api-token-here"
+
+scan:
+  methods:
+    - GET
+    - POST
+    - PUT
+    - DELETE
+    - PATCH
+  
+  timeout: 30
+  max_concurrent: 10
+  verify_ssl: true
+
+# Specific endpoints to test
+endpoints:
+  - path: "/api/v1/users"
+    methods: ["GET", "POST"]
+  
+  - path: "/api/v1/users/{id}"
+    methods: ["GET", "PUT", "DELETE"]
+  
+  - path: "/api/v1/admin"
+    methods: ["GET"]
+
+# Paths to exclude
+exclude:
+  - "/health"
+  - "/metrics"
+  - "/docs"
+  - "/swagger"
+
+# Report settings
+report:
+  format: "json"
+  output: "security-report.json"
