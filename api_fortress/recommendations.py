@@ -87,7 +87,7 @@ class SecurityRecommendations:
                 recommendations["medium_priority"].append(f"  • {vuln.name}")
 
         # API-specific recommendations
-        target_url = scan_result.target_url.lower()
+        target_url = scan_result.target.lower()
         
         if "firebaseio.com" in target_url or "firebase" in target_url:
             recommendations["api_specific"] = self._get_firebase_recommendations(
