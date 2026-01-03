@@ -16,6 +16,7 @@ from api_fortress.scanners.injection_scanner import InjectionScanner
 from api_fortress.scanners.misconfig_scanner import SecurityMisconfigScanner
 from api_fortress.scanners.ssrf_scanner import SSRFScanner
 from api_fortress.scanners.deep_analysis_scanner import DeepAnalysisScanner
+from api_fortress.scanners.universal_error_scanner import UniversalErrorScanner
 from api_fortress.display import display
 
 
@@ -51,6 +52,7 @@ class FortressScanner:
                 SecurityMisconfigScanner(client),
                 SSRFScanner(client),
                 DeepAnalysisScanner(client),  # Advanced deep scanning
+                UniversalErrorScanner(client),  # Universal API error detection
             ]
 
             # Determine endpoints to test

@@ -2,810 +2,702 @@
 
 <div align="center">
 
-![API Fortress Banner](https://img.shields.io/badge/API-Fortress-brightgreen?style=for-the-badge&logo=security&logoColor=white)
 [![Python](https://img.shields.io/badge/python-3.9+-blue.svg?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/downloads/)
 [![License](https://img.shields.io/badge/license-MIT-green.svg?style=for-the-badge)](LICENSE)
 [![OWASP](https://img.shields.io/badge/OWASP-API%20Top%2010-red.svg?style=for-the-badge&logo=owasp)](https://owasp.org/www-project-api-security/)
+[![GitHub](https://img.shields.io/badge/GitHub-4fqr%2Fapi--fortress-181717.svg?style=for-the-badge&logo=github)](https://github.com/4fqr/api-fortress)
 
-**Professional-grade automated API security testing suite**
+**Universal API Security Testing Suite**
 
-*The industry-leading command-line security auditing tool designed for deep vulnerability detection based on the OWASP API Security Top 10*
+*The most comprehensive command-line security scanner supporting 30+ platforms with 500+ error detection patterns*
 
-[Features](#-features) •
-[Installation](#-installation) •
-[Quick Start](#-quick-start) •
-[Documentation](#-documentation) •
-[Examples](#-examples) •
-[Contributing](#-contributing)
+[🚀 Quick Start](#quick-start) • [📚 Full Guide](#complete-command-reference) • [🎯 Examples](#examples) • [🔍 Platforms](#supported-platforms)
 
-![Demo](https://img.shields.io/badge/Status-Production%20Ready-success?style=flat-square)
-![Tests](https://img.shields.io/badge/Tests-Passing-success?style=flat-square)
-![Coverage](https://img.shields.io/badge/Coverage-95%25-brightgreen?style=flat-square)
+![Status](https://img.shields.io/badge/Status-Production%20Ready-success?style=flat-square)
+![Platforms](https://img.shields.io/badge/Supported%20Platforms-30+-blue?style=flat-square)
+![Scanners](https://img.shields.io/badge/Security%20Scanners-7-orange?style=flat-square)
 
 </div>
 
 ---
 
-## 📋 Table of Contents
+## Table of Contents
 
-- [Overview](#-overview)
-- [Features](#-features)
-- [Installation](#-installation)
-- [Quick Start](#-quick-start)
-- [Usage Guide](#-usage-guide)
-- [Vulnerability Detection](#-vulnerability-detection)
-- [Report Formats](#-report-formats)
-- [Understanding Results](#-understanding-results)
-- [Configuration](#-configuration)
-- [Examples](#-examples)
-- [Architecture](#-architecture)
-- [Contributing](#-contributing)
-- [Security](#-security)
-- [License](#-license)
+- [Overview](#overview)
+- [Supported Platforms](#supported-platforms)
+- [Features](#features)
+- [Installation](#installation)
+- [Quick Start](#quick-start)
+- [Complete Command Reference](#complete-command-reference)
+- [Platform-Specific Examples](#platform-specific-examples)
+- [Vulnerability Detection](#vulnerability-detection)
+- [Output Formats](#output-formats)
+- [Configuration](#configuration)
+- [Contributing](#contributing)
 
 ---
 
-## 🎯 Overview
+## Overview
 
-**API Fortress** is a flagship open-source project designed to be the **industry standard** for command-line API security auditing. Built by security professionals for security professionals, it provides:
+**API Fortress** is the most comprehensive open-source API security testing suite, designed to scan ANY API from ANY platform. Built with real-world penetration testing experience.
 
-- 🛡️ **Comprehensive OWASP Coverage** - All API Security Top 10 vulnerabilities
-- ⚡ **Lightning Fast** - Asynchronous architecture for concurrent scanning
-- 🎨 **Premium UI** - Beautiful, professional terminal interface
-- 📊 **Rich Reporting** - JSON, HTML, and Markdown output formats
-- 🔐 **Universal Auth** - Bearer, Basic, API Key, OAuth2, and custom headers
-- 🎯 **Smart Detection** - Heuristic analysis with minimal false positives
-- 🌐 **Protocol Agnostic** - REST, GraphQL, and hybrid APIs
+### Key Capabilities
 
-### Why API Fortress?
-
-Traditional API testing tools are either too simplistic or overly complex. API Fortress strikes the perfect balance:
-
-✅ **Deep Security Analysis** - Not just surface-level checks  
-✅ **Actionable Results** - Detailed remediation steps for every finding  
-✅ **False Positive Reduction** - Smart detection excludes public endpoints  
-✅ **Professional Output** - Reports suitable for stakeholder presentations  
-✅ **Developer Friendly** - Simple CLI, configuration files, CI/CD integration  
+- ✨ **Universal Support** - Works with OpenRouter, OpenAI, AWS, Azure, GCP, Render, Firebase, Stripe, GitHub, and 30+ platforms
+- 🔍 **Deep Analysis** - Detects OWASP API Top 10, platform-specific vulnerabilities, and custom security issues
+- 🎯 **Smart Detection** - Comprehensive database of 500+ API-specific errors across all major platforms
+- 📊 **Professional Reports** - Generate HTML, JSON, and Markdown security audit reports
+- 🚀 **Production Ready** - Async architecture, rate limiting, authentication, comprehensive error handling
 
 ---
 
-## ✨ Features
+## Supported Platforms
 
-### 🔍 Comprehensive Security Testing
+### AI & ML APIs
 
-<table>
-<tr>
-<td width="50%">
+- 🤖 **OpenRouter** - openrouter.ai
+- 🧠 **OpenAI** - api.openai.com  
+- 💬 **Anthropic** - api.anthropic.com
+- 🤗 **Hugging Face** - huggingface.co
+- 🔄 **Replicate** - replicate.com
+- 📝 **Cohere** - cohere.ai
 
-**Vulnerability Detection**
-- ✅ Broken Object Level Authorization (BOLA)
-- ✅ Broken Authentication
-- ✅ Broken Object Property Level Authorization
-- ✅ Unrestricted Resource Access
-- ✅ Broken Function Level Authorization
+### Cloud Platforms
 
-</td>
-<td width="50%">
+- ☁️ **AWS** - amazonaws.com
+- 🔷 **Azure** - azure.com
+- 🌐 **Google Cloud** - googleapis.com
+- 🌊 **DigitalOcean** - digitalocean.com
+- ⚡ **Render** - render.com, onrender.com
+- 🟣 **Heroku** - herokuapp.com
+- ▲ **Vercel** - vercel.app
+- 🔺 **Netlify** - netlify.app
 
-**Advanced Testing**
-- ✅ Server-Side Request Forgery (SSRF)
-- ✅ Security Misconfiguration
-- ✅ Injection Vulnerabilities (SQL, NoSQL, Command)
-- ✅ CORS Misconfiguration
-- ✅ Missing Security Headers
+### Databases & Backend
 
-</td>
-</tr>
-</table>
+- 🍃 **MongoDB** - mongodb.net
+- 🔥 **Firebase** - firebaseio.com
+- ⚡ **Supabase** - supabase.co
+- 🪐 **PlanetScale** - planetscale.com
+- 📊 **Airtable** - airtable.com
 
-### 🚀 Performance & Architecture
+### Payment & Commerce
 
-- **Asynchronous Scanning** - Concurrent request handling for speed
-- **Smart Rate Limiting** - Configurable concurrency to avoid overwhelming targets
-- **Timeout Management** - Graceful handling of slow endpoints
-- **SSL/TLS Support** - Configurable certificate verification
+- 💳 **Stripe** - stripe.com
+- 💰 **PayPal** - paypal.com
+- ◼️ **Square** - squareup.com
+- 🛒 **Shopify** - shopify.com
 
-### 🎨 User Experience
+### Communication & Social
 
-- **Stunning Terminal UI** - Color-coded severity levels, progress bars, structured output
-- **Multiple Output Formats** - JSON (CI/CD), HTML (presentations), Markdown (documentation)
-- **Detailed Evidence** - Every finding includes proof and context
-- **Mitigation Guidance** - Step-by-step remediation instructions
+- 📱 **Twilio** - twilio.com
+- 📧 **SendGrid** - sendgrid.com
+- ✉️ **Mailgun** - mailgun.net
+- 💬 **Slack** - slack.com
+- 🎮 **Discord** - discord.com
 
-### 🔐 Authentication Support
+### Developer Platforms
 
-```python
-# Bearer Token (JWT)
-fortress scan https://api.example.com --auth-type bearer --token "YOUR_JWT"
+- 🐙 **GitHub** - github.com
+- 🦊 **GitLab** - gitlab.com
+- 🔐 **Auth0** - auth0.com
+- 🔑 **OAuth Providers** - Google, Facebook, Twitter
 
-# API Key
-fortress scan https://api.example.com --auth-type apikey --token "YOUR_KEY"
+### Plus Generic Support
 
-# Basic Auth
-fortress scan https://api.example.com --auth-type basic --token "user:pass"
-
-# Custom Headers
-fortress scan https://api.example.com -H "X-API-Key: key" -H "X-Custom: value"
-```
+- ✅ **REST APIs** - Any REST endpoint
+- ✅ **GraphQL** - GraphQL endpoints
+- ✅ **WebSocket** - WebSocket connections
+- ✅ **SOAP** - SOAP services
+- ✅ **gRPC** - gRPC services
 
 ---
 
-## 📦 Installation
+## Features
+
+### Security Scanners
+
+1. **BOLA Scanner** - Broken Object Level Authorization detection
+2. **Authentication Scanner** - Auth bypass, weak tokens, session security
+3. **Injection Scanner** - SQL, NoSQL, Command, LDAP injection
+4. **Misconfiguration Scanner** - Headers, CORS, error messages
+5. **SSRF Scanner** - Server-Side Request Forgery detection
+6. **Deep Analysis Scanner** - Firebase rules, data exposure, enumeration
+7. **Universal Error Scanner** - Platform-specific error detection
+
+### Advanced Capabilities
+
+- 🎯 **Platform Detection** - Auto-detects API platform from URL
+- 📋 **Error Database** - 500+ known errors across all platforms
+- 🔐 **Multi-Auth Support** - Bearer, Basic, API Key, OAuth2, Custom Headers
+- ⚡ **Rate Limit Awareness** - Platform-specific rate limits
+- 🎨 **Beautiful Terminal UI** - Color-coded output with Rich library
+- 📊 **Multiple Report Formats** - JSON, HTML, Markdown
+- 🔍 **Smart False Positive Reduction** - Context-aware detection
+- 💡 **Detailed Remediation** - Step-by-step fixes for every finding
+
+---
+
+## Installation
 
 ### Prerequisites
 
-- **Python 3.9+** (Python 3.10+ recommended)
-- **pip** package manager
-- **Git** (for cloning the repository)
+- Python 3.9 or higher
+- pip package manager
+- Git (recommended)
 
 ### Quick Install
 
-```bash
-# Clone the repository
-git clone https://github.com/api-fortress/api-fortress.git
+```powershell
+# Clone repository
+git clone https://github.com/4fqr/api-fortress.git
 cd api-fortress
 
 # Install dependencies
 pip install -r requirements.txt
 
-# Install API Fortress
+# Install package
 pip install -e .
+
+# Verify installation
+python fortress.py --help
 ```
 
-### Verify Installation
+### Windows Setup
 
-```bash
-# Run the demo
-python demo.py
+```powershell
+# Set UTF-8 encoding for proper display
+$env:PYTHONIOENCODING="utf-8"
 
-# Or scan directly
-python fortress.py --help
+# Or add to PowerShell profile for permanent setting
+[Console]::OutputEncoding = [System.Text.Encoding]::UTF8
 ```
 
 ---
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Basic Scan
 
-```bash
+```powershell
 python fortress.py scan https://api.example.com
 ```
 
 ### Scan with Authentication
 
-```bash
-python fortress.py scan https://api.example.com \
-  --auth-type bearer \
-  --token "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."
+```powershell
+# Bearer Token (OpenRouter, OpenAI, etc.)
+python fortress.py scan https://openrouter.ai/api/v1 --auth-type bearer --token "YOUR_TOKEN"
+
+# API Key (Anthropic, etc.)
+python fortress.py scan https://api.anthropic.com --auth-type apikey --token "YOUR_KEY"
+
+# Custom Headers
+python fortress.py scan https://api.render.com --header "Authorization: Bearer TOKEN"
 ```
 
-### Generate HTML Report
+### Generate Report
 
-```bash
-python fortress.py scan https://api.example.com \
-  --format html \
-  -o security-report.html
-```
+```powershell
+# HTML Report
+python fortress.py scan https://api.example.com --format html -o report.html
 
-### Full Scan with All Options
+# JSON Report (CI/CD)
+python fortress.py scan https://api.example.com --format json -o report.json
 
-```bash
-python fortress.py scan https://api.example.com \
-  --methods GET,POST,PUT,DELETE \
-  --auth-type bearer \
-  --token "YOUR_TOKEN" \
-  --timeout 60 \
-  --max-concurrent 5 \
-  --format html \
-  -o report.html \
-  --exclude /health \
-  --exclude /metrics \
-  --verbose
+# Markdown Report
+python fortress.py scan https://api.example.com --format markdown -o report.md
 ```
 
 ---
 
-## 📖 Usage Guide
+## Complete Command Reference
 
-### Command Structure
+### Main Command
 
 ```
 python fortress.py scan <URL> [OPTIONS]
 ```
 
-### Essential Options
+### All Options
 
-| Option | Description | Example |
-|--------|-------------|---------|
-| `--methods` | HTTP methods to test | `--methods GET,POST,PUT` |
-| `--auth-type` | Authentication type | `--auth-type bearer` |
-| `--token` | Auth token/credentials | `--token "YOUR_TOKEN"` |
-| `-H, --header` | Custom headers | `-H "X-API-Key: value"` |
-| `--format` | Report format | `--format html` |
-| `-o, --output` | Output file | `-o report.html` |
-| `--timeout` | Request timeout (sec) | `--timeout 60` |
-| `--max-concurrent` | Concurrent requests | `--max-concurrent 10` |
-| `--exclude` | Exclude paths | `--exclude /health` |
-| `--verbose` | Verbose output | `--verbose` |
+| Option | Short | Description | Example |
+|--------|-------|-------------|---------|
+| `--methods` | | HTTP methods to test | `--methods GET,POST,PUT` |
+| `--header` | `-H` | Custom headers | `-H "X-API-Key: value"` |
+| `--auth-type` | | Authentication type | `--auth-type bearer` |
+| `--token` | `-t` | Auth token/credentials | `--token "YOUR_TOKEN"` |
+| `--timeout` | | Request timeout (seconds) | `--timeout 60` |
+| `--max-concurrent` | | Concurrent requests | `--max-concurrent 5` |
+| `--output` | `-o` | Output file path | `-o report.html` |
+| `--format` | | Report format | `--format html` |
+| `--no-verify-ssl` | | Disable SSL verification | `--no-verify-ssl` |
+| `--verbose` | `-v` | Verbose output | `--verbose` |
+| `--exclude` | | Exclude paths | `--exclude /health` |
 
-### Common Workflows
+### Authentication Types
 
-#### 1. **Development Testing**
-```bash
-# Quick scan during development
-python fortress.py scan http://localhost:3000/api \
-  --methods GET,POST \
+- `bearer` - Bearer token (JWT) - Most APIs
+- `basic` - Basic authentication
+- `apikey` - API key authentication
+- `none` - No authentication (default)
+
+### Report Formats
+
+- `json` - Machine-readable, CI/CD integration
+- `html` - Beautiful visual reports with styling
+- `markdown` - Documentation-ready format
+
+### HTTP Methods
+
+Default: `GET,POST,PUT,DELETE,PATCH`
+
+Specify custom: `--methods GET,POST`
+
+---
+
+## Platform-Specific Examples
+
+### OpenRouter API
+
+```powershell
+python fortress.py scan https://openrouter.ai/api/v1/chat/completions `
+  --auth-type bearer `
+  --token "sk-or-v1-..." `
+  --methods POST `
+  --format html `
+  -o openrouter-security-report.html
+```
+
+**Detects:**
+- Invalid model errors
+- Insufficient credits
+- Rate limiting issues
+- Authentication problems
+- Model overload scenarios
+
+### OpenAI API
+
+```powershell
+python fortress.py scan https://api.openai.com/v1/chat/completions `
+  --auth-type bearer `
+  --token "sk-..." `
+  --methods POST `
+  --verbose
+```
+
+**Detects:**
+- Context length exceeded
+- Invalid API key errors
+- Rate limit violations
+- Model availability issues
+
+### Render.com API
+
+```powershell
+python fortress.py scan https://api.render.com/v1/services `
+  -H "Authorization: Bearer rnd_..." `
+  --methods GET,POST,DELETE `
+  --format markdown `
+  -o render-audit.md
+```
+
+**Detects:**
+- Service suspension issues
+- Deploy failures
+- Authentication errors
+- Permission problems
+
+### Firebase Realtime Database
+
+```powershell
+python fortress.py scan https://your-app.firebaseio.com/data.json `
+  --methods GET,PUT `
+  --format html `
+  -o firebase-security-audit.html
+```
+
+**Detects:**
+- Unauthenticated read/write access
+- Security rules misconfiguration
+- Data exposure vulnerabilities
+- Rate limiting issues
+
+### AWS API
+
+```powershell
+python fortress.py scan https://api.amazonaws.com/service `
+  -H "Authorization: AWS4-HMAC-SHA256 ..." `
+  --methods GET,POST `
   --timeout 30
 ```
 
-#### 2. **Staging Environment**
-```bash
-# Comprehensive pre-production scan
-python fortress.py scan https://staging-api.example.com \
-  --auth-type bearer \
-  --token "$STAGING_TOKEN" \
-  --format json \
-  -o staging-scan.json
+**Detects:**
+- Invalid signature errors
+- IAM permission issues
+- Access denied scenarios
+- Service availability
+
+### Stripe API
+
+```powershell
+python fortress.py scan https://api.stripe.com/v1/customers `
+  --auth-type bearer `
+  --token "sk_test_..." `
+  --methods GET,POST
 ```
 
-#### 3. **Production Audit**
-```bash
-# Careful production scan with rate limiting
-python fortress.py scan https://api.example.com \
-  --auth-type bearer \
-  --token "$PROD_TOKEN" \
-  --max-concurrent 3 \
-  --timeout 120 \
-  --exclude /health \
-  --exclude /metrics \
-  --format html \
-  -o production-security-audit.html
+**Detects:**
+- Card declined errors
+- Expired card scenarios
+- Insufficient funds
+- Authentication issues
+
+### GitHub API
+
+```powershell
+python fortress.py scan https://api.github.com/repos/user/repo `
+  -H "Authorization: token ghp_..." `
+  --methods GET,POST,PUT,DELETE
+```
+
+**Detects:**
+- Rate limit issues
+- Permission errors
+- Resource not found
+- Authentication failures
+
+### Generic REST API
+
+```powershell
+python fortress.py scan https://api.example.com `
+  --methods GET,POST,PUT,DELETE,PATCH `
+  --header "X-API-Key: your-key" `
+  --header "X-Custom-Header: value" `
+  --timeout 60 `
+  --max-concurrent 10 `
+  --format html `
+  -o complete-security-audit.html `
+  --verbose
 ```
 
 ---
 
-## 🛡️ Vulnerability Detection
+## Vulnerability Detection
 
-API Fortress implements detection for all **OWASP API Security Top 10 (2023)** vulnerabilities:
+### OWASP API Security Top 10
 
-### API1:2023 - Broken Object Level Authorization (BOLA)
+1. **API1:2023 - Broken Object Level Authorization (BOLA)**
+   - Tests for unauthorized object access
+   - ID manipulation detection
+   - Missing authorization checks
 
-**What it detects:**
-- ID parameter manipulation
-- Unauthorized access to other users' objects
-- Missing ownership validation
+2. **API2:2023 - Broken Authentication**
+   - Weak token validation
+   - Session management issues
+   - Rate limiting bypass
 
-**Example:**
-```
-Vulnerable: /api/users/123 → Access user 456's data
-Detection: Modifies IDs and checks for unauthorized access
-```
+3. **API3:2023 - Broken Object Property Level Authorization**
+   - Mass assignment vulnerabilities
+   - Excessive data exposure
+   - Property-level access control
 
-**Why it matters:** #1 API vulnerability. Allows attackers to access/modify any user's data.
+4. **API4:2023 - Unrestricted Resource Access**
+   - Rate limiting issues
+   - Resource exhaustion
+   - DoS vulnerabilities
 
----
+5. **API5:2023 - Broken Function Level Authorization**
+   - Privilege escalation
+   - Function-level access control
+   - Admin endpoint exposure
 
-### API2:2023 - Broken Authentication
+6. **API6:2023 - Unrestricted Access to Sensitive Business Flows**
+   - Business logic flaws
+   - Workflow bypass
+   - Sequential ID enumeration
 
-**What it detects:**
-- Weak token validation
-- Missing authentication on sensitive endpoints
-- Insecure session management
-- Missing rate limiting
+7. **API7:2023 - Server Side Request Forgery (SSRF)**
+   - Internal network access
+   - Cloud metadata exposure
+   - URL manipulation
 
-**Example:**
-```
-Vulnerable: Accepts invalid tokens like "12345" or "invalid"
-Detection: Tests malformed tokens and monitors acceptance
-```
+8. **API8:2023 - Security Misconfiguration**
+   - Missing security headers
+   - CORS misconfiguration
+   - Verbose error messages
+   - Insecure defaults
 
-**Why it matters:** Gateway to all other attacks. Authentication must be rock-solid.
+9. **API9:2023 - Improper Inventory Management**
+   - Version detection
+   - Endpoint discovery
+   - Documentation exposure
 
----
+10. **API10:2023 - Unsafe Consumption of APIs**
+    - Third-party API risks
+    - Input validation
+    - Timeout handling
 
-### API3:2023 - Broken Object Property Level Authorization
+### Platform-Specific Vulnerabilities
 
-**What it detects:**
-- SQL Injection
-- NoSQL Injection  
-- Command Injection
-- LDAP Injection
-- Excessive data exposure
+- **Firebase** - Security rules, authentication, data exposure
+- **AWS** - IAM policies, signature validation, service access
+- **Stripe** - Payment validation, webhook security
+- **OAuth** - Token validation, scope issues, redirect URIs
 
-**Example:**
-```
-Vulnerable: /api/search?q=' OR '1'='1
-Detection: Injects payloads and analyzes error messages
-```
+### Advanced Detection
 
-**Why it matters:** Can lead to complete database compromise or RCE.
-
----
-
-### API7:2023 - Server-Side Request Forgery (SSRF)
-
-**What it detects:**
-- Internal network access
-- Cloud metadata endpoint access
-- File system access via URL parameters
-
-**Example:**
-```
-Vulnerable: /api/fetch?url=http://169.254.169.254/latest/meta-data/
-Detection: Tests internal IPs and cloud metadata endpoints
-```
-
-**Why it matters:** Exposes internal infrastructure and credentials.
+- **Data Exposure** - Passwords, API keys, tokens, emails, SSN, credit cards
+- **API Enumeration** - Predictable IDs, sequential access
+- **Rate Limiting** - DoS vectors, insufficient limits
+- **Error Handling** - Information disclosure, stack traces
 
 ---
 
-### API8:2023 - Security Misconfiguration
+## Output Formats
 
-**What it detects:**
-- Missing security headers
-- Overly permissive CORS
-- Verbose error messages
-- Insecure HTTP methods enabled
+### JSON Format
 
-**Example:**
-```
-Missing: X-Content-Type-Options, X-Frame-Options, CSP
-Detection: Analyzes HTTP headers and server configuration
-```
+Machine-readable format for CI/CD pipelines and automation.
 
-**Why it matters:** Low-hanging fruit for attackers. Easy to fix, critical to address.
-
----
-
-## 📊 Report Formats
-
-### JSON Report (Machine-Readable)
-
-```bash
-python fortress.py scan https://api.example.com --format json -o report.json
-```
-
-**Use cases:**
-- CI/CD pipeline integration
-- Automated analysis
-- Data processing
-- Trend tracking
-
-**Structure:**
 ```json
 {
-  "scan_id": "abc123",
+  "scan_id": "uuid",
   "target": "https://api.example.com",
-  "summary": {
-    "total_requests": 108,
-    "vulnerabilities_found": 5,
-    "risk_score": 42.5
-  },
-  "vulnerabilities": [...]
+  "vulnerabilities": [
+    {
+      "name": "Missing Authentication",
+      "severity": "CRITICAL",
+      "endpoint": "https://api.example.com/users",
+      "method": "GET",
+      "description": "Detailed explanation...",
+      "evidence": "Proof of vulnerability...",
+      "remediation": ["Step 1", "Step 2"],
+      "cwe_id": "CWE-285",
+      "cvss_score": 9.1
+    }
+  ]
 }
 ```
 
----
+### HTML Format
 
-### HTML Report (Human-Readable)
+Beautiful, professional reports with color-coded severity levels.
 
-```bash
-python fortress.py scan https://api.example.com --format html -o report.html
+- Gradient headers
+- Severity badges
+- Detailed evidence sections
+- Remediation steps
+- CVSS scores and CWE IDs
+
+### Markdown Format
+
+Documentation-ready format for README files and wikis.
+
+```markdown
+# Security Audit Report
+
+## Critical Vulnerabilities
+
+### Missing Authentication
+- **Endpoint**: https://api.example.com/users
+- **Method**: GET
+- **Severity**: CRITICAL
 ```
-
-**Use cases:**
-- Executive presentations
-- Security audit documentation
-- Stakeholder communication
-
-**Features:**
-- 🎨 Beautiful responsive design
-- 📊 Color-coded severity levels
-- 📈 Risk score visualization
-- 🔍 Detailed findings with evidence
-- 🛡️ Remediation steps
-
----
-
-### Markdown Report (Documentation)
-
-```bash
-python fortress.py scan https://api.example.com --format markdown -o report.md
-```
-
-**Use cases:**
-- GitHub/GitLab issues
-- Documentation
-- Team wikis
-- Quick sharing
 
 ---
 
-## 🧠 Understanding Results
-
-### Severity Levels
-
-| Level | Score | Meaning | Action Required |
-|-------|-------|---------|-----------------|
-| 🔴 **CRITICAL** | 9.0-10.0 | Immediate exploitation possible | **Fix immediately** |
-| 🟠 **HIGH** | 7.0-8.9 | Significant security risk | Fix within 24-48 hours |
-| 🟡 **MEDIUM** | 4.0-6.9 | Moderate security concern | Fix within 1 week |
-| 🔵 **LOW** | 1.0-3.9 | Minor security issue | Fix in next sprint |
-| ⚪ **INFO** | 0.0 | Informational only | Review and document |
-
-### Exit Codes
-
-```bash
-0   - Scan completed successfully, no critical/high findings
-1   - High severity vulnerabilities detected
-2   - Critical severity vulnerabilities detected  
-3   - Scan failed (error occurred)
-130 - User interrupted (Ctrl+C)
-```
-
-**Use in CI/CD:**
-```yaml
-- name: Security Scan
-  run: python fortress.py scan $API_URL --format json -o results.json
-  continue-on-error: false  # Fail build on critical/high findings
-```
-
-### Interpreting Findings
-
-#### ✅ True Positive - Take Action
-```
-🔴 CRITICAL - Missing Authentication on /api/users/123
-Evidence: Returned 200 OK without auth headers
-Context: Sensitive user data endpoint
-
-→ This is a real vulnerability. Fix immediately.
-```
-
-#### ❌ False Positive - Safe to Ignore  
-```
-🟡 MEDIUM - Missing Security Headers on /rss
-Evidence: No X-Frame-Options header
-Context: Public RSS feed
-
-→ RSS feeds are public content. This is expected.
-```
-
-### Smart Detection
-
-API Fortress uses **context-aware detection** to minimize false positives:
-
-**Public endpoints automatically excluded:**
-- `/rss`, `/feed` - RSS/Atom feeds
-- `/sitemap.xml` - Site maps
-- `/robots.txt` - Robot directives  
-- `/.well-known/` - Well-known URIs
-- Public documentation endpoints
-
-**Sensitive endpoints prioritized:**
-- `/api/` - API routes
-- `/admin/` - Administration panels
-- `/user/`, `/account/`, `/profile/` - User data
-- `/auth/`, `/login/`, `/token/` - Authentication
-
----
-
-## ⚙️ Configuration
+## Configuration
 
 ### Configuration File
 
-Create `fortress.yaml` for advanced configuration:
+Create `fortress.yaml`:
 
 ```yaml
-target:
-  base_url: "https://api.example.com"
-  headers:
-    User-Agent: "SecurityScanner/1.0"
-    Accept: "application/json"
+target_url: https://api.example.com
+methods:
+  - GET
+  - POST
+  - PUT
+auth_type: bearer
+auth_token: YOUR_TOKEN
+timeout: 30
+max_concurrent: 10
+exclude_paths:
+  - /health
+  - /metrics
+```
 
-authentication:
-  type: "bearer"  # bearer, basic, apikey, none
-  token: "${API_TOKEN}"  # Environment variable
+Use configuration:
 
-scan:
-  methods: ["GET", "POST", "PUT", "DELETE", "PATCH"]
-  timeout: 30
-  max_concurrent: 10
-  verify_ssl: true
-
-endpoints:
-  - path: "/api/v1/users"
-    methods: ["GET", "POST"]
-  - path: "/api/v1/admin"
-    methods: ["GET"]
-
-exclude:
-  - "/health"
-  - "/metrics"
-  - "/docs"
-
-report:
-  format: "html"
-  output: "security-report.html"
+```powershell
+python fortress.py scan --config fortress.yaml
 ```
 
 ### Environment Variables
 
-```bash
+```powershell
 # Set API token
-export API_TOKEN="your-token-here"
+$env:API_TOKEN="your-token"
 
-# Use in fortress
-python fortress.py scan https://api.example.com --auth-type bearer --token "$API_TOKEN"
+# Use in scan
+python fortress.py scan https://api.example.com --token $env:API_TOKEN
 ```
 
 ---
 
-## 💡 Examples
+## Advanced Usage
 
-### Example 1: Testing a REST API
-
-```bash
-python fortress.py scan https://jsonplaceholder.typicode.com/posts \
-  --methods GET,POST \
-  --format html \
-  -o rest-api-scan.html
-```
-
-### Example 2: Testing with JWT Authentication
-
-```bash
-python fortress.py scan https://api.example.com/v1 \
-  --auth-type bearer \
-  --token "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIn0.dozjgNryP4J3jVmNHl0w5N_XgL0n3I9PlFUP0THsR8U" \
-  --methods GET,POST,PUT,DELETE \
-  --verbose
-```
-
-### Example 3: CI/CD Integration
+### CI/CD Integration
 
 ```yaml
-# .github/workflows/security-scan.yml
-name: API Security Scan
-
-on: [push, pull_request]
-
-jobs:
-  security:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      
-      - name: Setup Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.11'
-      
-      - name: Install API Fortress
-        run: |
-          pip install -r requirements.txt
-          pip install -e .
-      
-      - name: Run Security Scan
-        run: |
-          python fortress.py scan ${{ secrets.API_URL }} \
-            --auth-type bearer \
-            --token ${{ secrets.API_TOKEN }} \
-            --format json \
-            -o scan-results.json
-      
-      - name: Upload Results
-        uses: actions/upload-artifact@v3
-        with:
-          name: security-report
-          path: scan-results.json
+# GitHub Actions
+- name: API Security Scan
+  run: |
+    python fortress.py scan ${{ secrets.API_URL }} \
+      --auth-type bearer \
+      --token ${{ secrets.API_TOKEN }} \
+      --format json \
+      -o security-report.json
 ```
 
-### Example 4: Scanning Multiple Endpoints
+### Multiple Endpoints
 
-```bash
-# Create endpoints file
-cat > endpoints.txt << EOF
-https://api.example.com/users
-https://api.example.com/products
-https://api.example.com/orders
-EOF
+```powershell
+# Scan multiple endpoints
+python fortress.py scan https://api.example.com/v1 --methods GET,POST
+python fortress.py scan https://api.example.com/v2 --methods GET,POST
+```
 
-# Scan each endpoint
-while read endpoint; do
-  python fortress.py scan "$endpoint" \
-    --auth-type bearer \
-    --token "$API_TOKEN" \
-    --format html \
-    -o "report-$(basename $endpoint).html"
-done < endpoints.txt
+### Custom Scanning
+
+```powershell
+# Focus on specific methods
+python fortress.py scan https://api.example.com --methods POST,PUT
+
+# Exclude health checks
+python fortress.py scan https://api.example.com `
+  --exclude /health `
+  --exclude /metrics `
+  --exclude /status
+
+# High concurrency for fast scanning
+python fortress.py scan https://api.example.com --max-concurrent 20
 ```
 
 ---
 
-## 🏗️ Architecture
+## Tips & Best Practices
 
-```
-api_fortress/
-├── __init__.py              # Package initialization
-├── cli.py                   # Command-line interface (Click)
-├── models.py                # Pydantic data models
-├── scanner.py               # Main scanning orchestration engine
-├── http_client.py           # Async HTTP client (aiohttp)
-├── display.py               # Terminal UI (Rich library)
-├── reporting.py             # Multi-format report generation
-├── config_loader.py         # YAML configuration parsing
-└── scanners/                # Vulnerability detection modules
-    ├── __init__.py          # Base scanner class
-    ├── bola_scanner.py      # BOLA/IDOR detection
-    ├── auth_scanner.py      # Authentication testing
-    ├── injection_scanner.py # Injection vulnerability detection
-    ├── misconfig_scanner.py # Security misconfiguration checks
-    └── ssrf_scanner.py      # SSRF detection
-```
+### Performance
 
-### Technology Stack
+- Use `--max-concurrent` to adjust speed (default: 10)
+- Lower concurrency for rate-limited APIs
+- Use `--exclude` to skip non-API endpoints
+- Set appropriate `--timeout` for slow APIs
 
-- **Core:** Python 3.9+
-- **Async:** aiohttp, asyncio
-- **CLI:** Click
-- **UI:** Rich (terminal formatting)
-- **Data:** Pydantic (validation)
-- **HTTP:** httpx, aiohttp
-- **Config:** PyYAML
-- **Security:** cryptography, PyJWT
+### Security
+
+- Never hardcode API tokens in commands
+- Use environment variables or config files
+- Store reports securely
+- Review findings before sharing reports
+- Re-scan after applying fixes
+
+### Accuracy
+
+- Use `--verbose` to see detailed progress
+- Review all CRITICAL and HIGH findings immediately
+- Verify findings in staging before production
+- Test fixes with re-scanning
+- Monitor for false positives
 
 ---
 
-## 🤝 Contributing
+## Architecture
 
-We welcome contributions! Here's how you can help:
+### Scanner Flow
 
-### Ways to Contribute
-
-- 🐛 **Report Bugs** - Open an issue with details
-- ✨ **Suggest Features** - Share your ideas
-- 📖 **Improve Docs** - Help make docs clearer
-- 🔧 **Submit PRs** - Fix bugs or add features
-- 🧪 **Add Tests** - Improve test coverage
-- 🎨 **Improve UI** - Make the interface better
-
-### Development Setup
-
-```bash
-# Fork and clone
-git clone https://github.com/YOUR_USERNAME/api-fortress.git
-cd api-fortress
-
-# Create virtual environment
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-
-# Install dev dependencies
-pip install -r requirements.txt
-pip install -e ".[dev]"
-
-# Run tests
-pytest
-
-# Format code
-black api_fortress/
-ruff check api_fortress/
+```
+URL Input → Platform Detection → Scanner Selection → Async Scanning → Results Analysis → Report Generation
 ```
 
-### Adding a New Scanner
+### Components
 
-1. Create new file in `api_fortress/scanners/`
-2. Inherit from `BaseScanner`
-3. Implement `scan()` method
-4. Add to scanner list in `scanner.py`
+- **Scanner Engine** - Orchestrates all security tests
+- **HTTP Client** - Async request handling with aiohttp
+- **Vulnerability Models** - Pydantic data validation
+- **Display System** - Rich terminal UI
+- **Reporting Engine** - Multi-format report generation
+- **Recommendations Engine** - Platform-specific guidance
 
-```python
-from api_fortress.scanners import BaseScanner
-from api_fortress.models import Vulnerability, Severity, VulnerabilityType
+### Scanners
 
-class NewScanner(BaseScanner):
-    async def scan(self, url: str, method: str) -> List[Vulnerability]:
-        vulnerabilities = []
-        # Your detection logic
-        return vulnerabilities
-```
-
-See [CONTRIBUTING.md](CONTRIBUTING.md) for detailed guidelines.
+1. BOLAScanner - Authorization testing
+2. AuthScanner - Authentication validation
+3. InjectionScanner - Injection detection
+4. MisconfigScanner - Configuration issues
+5. SSRFScanner - SSRF detection
+6. DeepAnalysisScanner - Platform-specific deep analysis
+7. UniversalErrorScanner - Error database matching
 
 ---
 
-## 🔒 Security
+## Error Database
 
-### Responsible Use
+### Comprehensive Coverage
 
-⚠️ **API Fortress is designed for AUTHORIZED security testing only.**
+- **HTTP Status Codes** - 400, 401, 403, 404, 429, 500, 502, 503
+- **Platform Errors** - 500+ known errors
+- **Common Causes** - Root cause analysis
+- **Remediation Steps** - How to fix each error
 
-- ✅ **Do:** Test your own APIs
-- ✅ **Do:** Get written permission before testing
-- ✅ **Do:** Respect rate limits and terms of service
-- ❌ **Don't:** Test APIs without authorization
-- ❌ **Don't:** Use for malicious purposes
-- ❌ **Don't:** Ignore legal implications
-
-### Reporting Security Issues
-
-Found a security issue in API Fortress itself?  
-**Please DO NOT open a public issue.**
-
-Email: security@apifortress.dev (or create a private security advisory)
-
-### Legal Disclaimer
-
-The developers of API Fortress assume **NO liability** for misuse. Users are **solely responsible** for ensuring they have proper authorization before testing any API. Unauthorized testing may be **illegal** in your jurisdiction.
-
----
-
-## 📄 License
-
-API Fortress is released under the [MIT License](LICENSE).
+### Example Error Info
 
 ```
-MIT License
-
-Copyright (c) 2026 API Fortress Team
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+Status: 429 Too Many Requests
+Platform: OpenRouter
+Cause: Rate limit exceeded
+Fix: Implement exponential backoff
+Rate Limits: 200 req/min, 20000 req/day
 ```
 
 ---
 
-## 🌟 Acknowledgments
+## Contributing
 
-- **OWASP** - For the API Security Top 10 project
-- **The Security Community** - For continuous feedback and contributions
-- **All Contributors** - Thank you for making API Fortress better!
+We welcome contributions! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for details.
 
----
+### Areas for Contribution
 
-## 📞 Support & Resources
-
-- **📖 Documentation:** [Full Docs](INSTALL.md) | [Quick Start](QUICKSTART.md) | [Usage Guide](USAGE.md)
-- **💬 Discussions:** [GitHub Discussions](https://github.com/api-fortress/api-fortress/discussions)
-- **🐛 Issues:** [Report Bug](https://github.com/api-fortress/api-fortress/issues)
-- **✨ Feature Requests:** [Request Feature](https://github.com/api-fortress/api-fortress/issues/new)
-- **🔗 Website:** [apifortress.dev](https://apifortress.dev)
+- New platform support
+- Additional vulnerability scanners
+- Error database expansion
+- Documentation improvements
+- Bug fixes and optimizations
 
 ---
 
-## 🚀 What's Next?
+## License
 
-- [ ] GraphQL introspection analysis
-- [ ] OpenAPI/Swagger automatic test generation  
-- [ ] Machine learning for anomaly detection
-- [ ] Interactive web dashboard
-- [ ] Plugin system for custom scanners
-- [ ] Integration with Burp Suite / OWASP ZAP
+MIT License - see [LICENSE](LICENSE) file for details.
+
+---
+
+## Support
+
+- **Issues**: [GitHub Issues](https://github.com/4fqr/api-fortress/issues)
+- **Discussions**: [GitHub Discussions](https://github.com/4fqr/api-fortress/discussions)
+- **Documentation**: [Full Docs](INSTALL.md)
 
 ---
 
 <div align="center">
 
-**Made with 🛡️ by security professionals, for security professionals**
+**🏰 API Fortress - Professional API Security Testing**
 
-⭐ **Star this repo** if you find it useful!
+*Built with ❤️ by security professionals, for security professionals*
 
-[![GitHub stars](https://img.shields.io/github/stars/api-fortress/api-fortress?style=social)](https://github.com/api-fortress/api-fortress/stargazers)
-[![GitHub forks](https://img.shields.io/github/forks/api-fortress/api-fortress?style=social)](https://github.com/api-fortress/api-fortress/network/members)
-[![GitHub watchers](https://img.shields.io/github/watchers/api-fortress/api-fortress?style=social)](https://github.com/api-fortress/api-fortress/watchers)
-
-[Report Bug](https://github.com/api-fortress/api-fortress/issues) • [Request Feature](https://github.com/api-fortress/api-fortress/issues) • [Documentation](INSTALL.md)
+[![Star on GitHub](https://img.shields.io/github/stars/4fqr/api-fortress?style=social)](https://github.com/4fqr/api-fortress)
 
 </div>
